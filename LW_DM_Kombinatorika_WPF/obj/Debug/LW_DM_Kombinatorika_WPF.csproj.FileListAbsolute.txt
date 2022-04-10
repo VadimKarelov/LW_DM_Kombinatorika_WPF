@@ -1,0 +1,16 @@
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\bin\Debug\LW_DM_Kombinatorika_WPF.exe.config
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\bin\Debug\LW_DM_Kombinatorika_WPF.exe
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\bin\Debug\LW_DM_Kombinatorika_WPF.pdb
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF.csproj.AssemblyReference.cache
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF.csproj.SuggestedBindingRedirects.cache
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\MainWindow.g.cs
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\App.g.cs
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF_MarkupCompile.cache
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF_MarkupCompile.lref
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\MainWindow.baml
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF.g.resources
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF.Properties.Resources.resources
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF.csproj.GenerateResource.cache
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF.csproj.CoreCompileInputs.cache
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF.exe
+D:\University\2 year\DiscreteMath\LW_DM_Kombinatorika_WPF\LW_DM_Kombinatorika_WPF\obj\Debug\LW_DM_Kombinatorika_WPF.pdb

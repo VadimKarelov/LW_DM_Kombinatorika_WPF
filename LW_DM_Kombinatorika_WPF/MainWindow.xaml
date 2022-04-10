@@ -1,0 +1,72 @@
+﻿<Window x:Class="LW_DM_Kombinatorika_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LW_DM_Kombinatorika_WPF"
+        mc:Ignorable="d"
+        Title="Kombinatorika" Height="400" Width="600" FontSize="18">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#1FAB89">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0" BorderThickness="0,0,0,0">
+                <StackPanel>
+                    <RadioButton x:Name="rb_Permutation" Content="Перестановка" Grid.Column="0" Checked="Compute" VerticalAlignment="Center"/>
+                    <RadioButton x:Name="rb_Accommodation" Content="Размещение" Grid.Column="1" Checked="Compute" VerticalAlignment="Center"/>
+                    <RadioButton x:Name="rb_Combination" Content="Сочетание" Grid.Column="2" Checked="Compute" VerticalAlignment="Center"/>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Grid.Column="1" BorderThickness="0,0,0,0">
+                <StackPanel VerticalAlignment="Center" >
+                    <RadioButton x:Name="rb_Repetition" Content="С повторениями" Grid.Column="0" Checked="Compute" VerticalAlignment="Center"/>
+                    <RadioButton x:Name="rb_NoRepetition" Content="Без повторений" Grid.Column="1" Checked="Compute" VerticalAlignment="Center"/>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Grid.Column="2" BorderThickness="0,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="n = " Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="tb_n" TextChanged="Compute" Grid.Row="0" Grid.Column="1" Background="#D7FBE8" VerticalAlignment="Center" MinWidth="100"/>
+
+                    <TextBlock Text="m = " Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="tb_m" TextChanged="Compute" Grid.Row="1" Grid.Column="1" Background="#D7FBE8" VerticalAlignment="Center" MinWidth="100"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#62D2A2">
+            <TextBlock Text="Формула: " VerticalAlignment="Center"/>
+            <TextBlock x:Name="tb_Formula" Text="x * n!" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <TextBlock x:Name="tb_Solution" TextWrapping="Wrap" Text="45" Grid.Row="2" Background="#9DF3C4"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Background="#D7FBE8">
+            <TextBlock Text="Ответ: " VerticalAlignment="Center"/>
+            <TextBlock x:Name="tb_Answer" Text="45" VerticalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
