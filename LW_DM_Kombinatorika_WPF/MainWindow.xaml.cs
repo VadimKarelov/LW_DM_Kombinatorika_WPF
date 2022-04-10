@@ -34,7 +34,7 @@ namespace LW_DM_Kombinatorika_WPF
             {
                 if (rb_Permutation.IsChecked == true && rb_NoRepetition.IsChecked == true)
                 {
-                    long res = CombinatoricsFormulas.PermutationNoRepetition(int.Parse(tb_n.Text), out string solution);
+                    long res = CombinatoricsFormulas.PermutationNoRepetition(long.Parse(tb_n.Text), out string solution);
                     tb_Formula.Text = CombinatoricsFormulas.Formula_PermutationNoRepetition;
                     tb_Solution.Text = solution;
                     tb_Answer.Text = res.ToString();
@@ -43,6 +43,34 @@ namespace LW_DM_Kombinatorika_WPF
                 {
                     long res = CombinatoricsFormulas.PermutationRepetition(tb_n.Text.Split(' ').Select(long.Parse).ToArray(), out string solution);
                     tb_Formula.Text = CombinatoricsFormulas.Formula_PermutationRepetition;
+                    tb_Solution.Text = solution;
+                    tb_Answer.Text = res.ToString();
+                }
+                else if (rb_Accommodation.IsChecked == true && rb_NoRepetition.IsChecked == true)
+                {
+                    long res = CombinatoricsFormulas.AccommodationNoRepetition(long.Parse(tb_n.Text), long.Parse(tb_m.Text), out string solution);
+                    tb_Formula.Text = CombinatoricsFormulas.Formula_AccommodationNoRepetition;
+                    tb_Solution.Text = solution;
+                    tb_Answer.Text = res.ToString();
+                }
+                else if (rb_Accommodation.IsChecked == true && rb_Repetition.IsChecked == true)
+                {
+                    long res = CombinatoricsFormulas.AccommodationRepetition(long.Parse(tb_n.Text), long.Parse(tb_m.Text), out string solution);
+                    tb_Formula.Text = CombinatoricsFormulas.Formula_AccommodationRepetition;
+                    tb_Solution.Text = solution;
+                    tb_Answer.Text = res.ToString();
+                }
+                else if (rb_Combination.IsChecked == true && rb_NoRepetition.IsChecked == true)
+                {
+                    long res = CombinatoricsFormulas.CombinationNoRepetition(long.Parse(tb_n.Text), long.Parse(tb_m.Text), out string solution);
+                    tb_Formula.Text = CombinatoricsFormulas.Formula_CombinationNoRepetition;
+                    tb_Solution.Text = solution;
+                    tb_Answer.Text = res.ToString();
+                }
+                else if (rb_Combination.IsChecked == true && rb_Repetition.IsChecked == true)
+                {
+                    long res = CombinatoricsFormulas.CombinationRepetition(long.Parse(tb_n.Text), long.Parse(tb_m.Text), out string solution);
+                    tb_Formula.Text = CombinatoricsFormulas.Formula_CombinationRepetition;
                     tb_Solution.Text = solution;
                     tb_Answer.Text = res.ToString();
                 }

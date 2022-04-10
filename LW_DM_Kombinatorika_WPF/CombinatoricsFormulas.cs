@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LW_DM_Kombinatorika_WPF
 {
-    static class CombinatoricsFormulas
+    public static class CombinatoricsFormulas
     {
         public static string Formula_PermutationNoRepetition = "n!";
 
@@ -60,6 +60,39 @@ namespace LW_DM_Kombinatorika_WPF
             solution += $" = {Factorial(n) / t2}";
 
             return Factorial(n) / t2;
+        }
+
+        public static string Formula_AccommodationNoRepetition = "n! / (n - m)!";
+
+        public static long AccommodationNoRepetition(long n, long m, out string solution)
+        {
+            solution = $"{n}! / ({n} - {m})! = {n}! / {n - m}! = {Factorial(n)} / {Factorial(n - m)} = {Factorial(n) / Factorial(n - m)}";
+            return Factorial(n) / Factorial(n - m);
+        }
+
+        public static string Formula_AccommodationRepetition = "n^m";
+
+        public static long AccommodationRepetition(long n, long m, out string solution)
+        {
+            solution = $"{n}^{m} = {Math.Pow(n, m)}";
+            return (long)Math.Pow(n, m);
+        }
+
+        public static string Formula_CombinationNoRepetition = "n! / (m! * (n - m)!) = A / m!";
+
+        public static long CombinationNoRepetition(long n, long m, out string solution)
+        {
+            solution = $"{n}! / ({m}! * ({n} - {m})!) = {n}! / ({m}! * {n - m}!) = {Factorial(n)} / ({Factorial(m)} * {Factorial(n - m)}) = {Factorial(n)} / {Factorial(m) * Factorial(n - m)} = {Factorial(n) / (Factorial(m) * Factorial(n - m))}";
+            return Factorial(n) / (Factorial(m) * Factorial(n - m));
+        }
+
+        public static string Formula_CombinationRepetition = "(n + m - 1)! / (m! * (n - 1)!) = C(n + m - 1, m)";
+
+        public static long CombinationRepetition(long n, long m, out string solution)
+        {
+            long res = CombinationNoRepetition(n + m - 1, m, out solution);
+            solution = $"C({n} + {m} - 1, {m}) = C({n + m - 1}, {m}) = {solution}";
+            return res;
         }
 
         private static long Factorial(long n)
