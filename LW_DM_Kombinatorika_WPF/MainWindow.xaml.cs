@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -34,42 +35,42 @@ namespace LW_DM_Kombinatorika_WPF
             {
                 if (rb_Permutation.IsChecked == true && rb_NoRepetition.IsChecked == true)
                 {
-                    long res = CombinatoricsFormulas.PermutationNoRepetition(long.Parse(tb_n.Text), out string solution);
+                    BigInteger res = CombinatoricsFormulas.PermutationNoRepetition(BigInteger.Parse(tb_n.Text), out string solution);
                     tb_Formula.Text = CombinatoricsFormulas.Formula_PermutationNoRepetition;
                     tb_Solution.Text = solution;
                     tb_Answer.Text = res.ToString();
                 }
                 else if (rb_Permutation.IsChecked == true && rb_Repetition.IsChecked == true)
                 {
-                    long res = CombinatoricsFormulas.PermutationRepetition(tb_n.Text.Split(' ').Select(long.Parse).ToArray(), out string solution);
+                    BigInteger res = CombinatoricsFormulas.PermutationRepetition(tb_n.Text.Split(' ').Select(BigInteger.Parse).ToArray(), out string solution);
                     tb_Formula.Text = CombinatoricsFormulas.Formula_PermutationRepetition;
                     tb_Solution.Text = solution;
                     tb_Answer.Text = res.ToString();
                 }
                 else if (rb_Accommodation.IsChecked == true && rb_NoRepetition.IsChecked == true)
                 {
-                    long res = CombinatoricsFormulas.AccommodationNoRepetition(long.Parse(tb_n.Text), long.Parse(tb_m.Text), out string solution);
+                    BigInteger res = CombinatoricsFormulas.AccommodationNoRepetition(BigInteger.Parse(tb_n.Text), BigInteger.Parse(tb_m.Text), out string solution);
                     tb_Formula.Text = CombinatoricsFormulas.Formula_AccommodationNoRepetition;
                     tb_Solution.Text = solution;
                     tb_Answer.Text = res.ToString();
                 }
                 else if (rb_Accommodation.IsChecked == true && rb_Repetition.IsChecked == true)
                 {
-                    long res = CombinatoricsFormulas.AccommodationRepetition(long.Parse(tb_n.Text), long.Parse(tb_m.Text), out string solution);
+                    BigInteger res = CombinatoricsFormulas.AccommodationRepetition(BigInteger.Parse(tb_n.Text), BigInteger.Parse(tb_m.Text), out string solution);
                     tb_Formula.Text = CombinatoricsFormulas.Formula_AccommodationRepetition;
                     tb_Solution.Text = solution;
                     tb_Answer.Text = res.ToString();
                 }
                 else if (rb_Combination.IsChecked == true && rb_NoRepetition.IsChecked == true)
                 {
-                    long res = CombinatoricsFormulas.CombinationNoRepetition(long.Parse(tb_n.Text), long.Parse(tb_m.Text), out string solution);
+                    BigInteger res = CombinatoricsFormulas.CombinationNoRepetition(BigInteger.Parse(tb_n.Text), BigInteger.Parse(tb_m.Text), out string solution);
                     tb_Formula.Text = CombinatoricsFormulas.Formula_CombinationNoRepetition;
                     tb_Solution.Text = solution;
                     tb_Answer.Text = res.ToString();
                 }
                 else if (rb_Combination.IsChecked == true && rb_Repetition.IsChecked == true)
                 {
-                    long res = CombinatoricsFormulas.CombinationRepetition(long.Parse(tb_n.Text), long.Parse(tb_m.Text), out string solution);
+                    BigInteger res = CombinatoricsFormulas.CombinationRepetition(BigInteger.Parse(tb_n.Text), BigInteger.Parse(tb_m.Text), out string solution);
                     tb_Formula.Text = CombinatoricsFormulas.Formula_CombinationRepetition;
                     tb_Solution.Text = solution;
                     tb_Answer.Text = res.ToString();
@@ -91,7 +92,7 @@ namespace LW_DM_Kombinatorika_WPF
             }
 
             // m
-            if (long.TryParse(tb_m.Text, out long t1) && t1 > 0)
+            if (BigInteger.TryParse(tb_m.Text, out BigInteger t1) && t1 > 0)
             {
                 tb_m.Background = new SolidColorBrush(Color.FromRgb(215, 251, 232));
             }
@@ -106,7 +107,7 @@ namespace LW_DM_Kombinatorika_WPF
             {
                 try
                 {
-                    long[] t3 = tb_n.Text.Split(' ').Select(long.Parse).ToArray();
+                    BigInteger[] t3 = tb_n.Text.Split(' ').Select(BigInteger.Parse).ToArray();
                     tb_n.Background = new SolidColorBrush(Color.FromRgb(215, 251, 232));
                 }
                 catch
@@ -118,7 +119,7 @@ namespace LW_DM_Kombinatorika_WPF
             }
             else
             {
-                if (long.TryParse(tb_n.Text, out long t2) && t2 > 0)
+                if (BigInteger.TryParse(tb_n.Text, out BigInteger t2) && t2 > 0)
                 {
                     tb_n.Background = new SolidColorBrush(Color.FromRgb(215, 251, 232));
                 }

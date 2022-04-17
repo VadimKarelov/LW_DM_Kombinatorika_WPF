@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LW_DM_Kombinatorika_WPF"
         mc:Ignorable="d"
-        Title="Kombinatorika" Height="400" Width="600" FontSize="18">
+        Title="Kombinatorika" Height="400" Width="600" FontSize="18" Icon="/icons8-граф-кликов-50.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
